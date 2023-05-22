@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--bg-col);
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 40rem;
+  margin: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "join join"
+    "sign-up why-us";
+}
+
+.join {
+  padding: 2rem;
+  grid-area: join;
+}
+
+.join h1 {
+  color: var(--primary-col);
+  margin-bottom: 1rem;
+}
+
+.join #join-desc {
+  color: var(--p-col);
+  margin-top: 0.5rem;
+}
+
+.sign-up {
+  padding: 2rem;
+  background-color: var(--primary-col);
+  color: #fff;
+  grid-area: sign-up;
+}
+
+.sign-up h2 {
+  margin-bottom: 1rem;
+}
+
+.sign-up #subscription-price {
+  color: var(--light-col);
+}
+
+.sign-up .btn {
+  display: block;
+  margin-top: 2rem;
+}
+
+.why-us {
+  padding: 2rem;
+  background-color: hsl(179, 62%, 48%);
+  color: #fff;
+  grid-area: why-us;
+}
+
+.why-us h2 {
+  margin-bottom: 1rem;
+}
+
+.why-us li {
+  color: var(--light-col);
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "join"
+    "sign-up"
+    "why-us";
+  }
+}
